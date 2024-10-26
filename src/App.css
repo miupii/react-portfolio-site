@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-container {
+    position: relative;
+}
+
+.bg-img{
+    width: 100%;
+    height: 100%;
+}
+
+/*in reality this will be differente for every clickable image and should be passed as props */
+.img-container {
+    position: absolute;
+    cursor: pointer;
+}
+
+.img-obj{
+    width: 100%;
+    height: 100%;
+}
+
+dialog {
+    border: none; /* Remove default border */
+    padding: 20px; /* Add some padding */
+    background-color: white; /* Background color for the dialog */
+    border-radius: 8px; /* Rounded corners */
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* Dark background behind the dialog */
+}
+
+/* Center the dialog when it opens */
+dialog[open] {
+    display: block; /* Override display to block when open */
+    position: fixed; /* Position fixed to center it */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Translate to center */
+}
